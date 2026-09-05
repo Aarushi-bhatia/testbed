@@ -13,6 +13,16 @@ function capitalize(str) {
 }
 
 /**
+ * Convert a string to lowercase.
+ *
+ * @param {string} str string to convert
+ * @returns {string} lowercase version of the string
+ */
+function lowercase(str) {
+  return str.toLowerCase();
+}
+
+/**
  * Reverse the characters in a string.
  *
  * @param {string} str string to reverse
@@ -51,6 +61,7 @@ function isPalindrome(str) {
 
 module.exports = {
   capitalize,
+  lowercase,
   reverse,
   truncate,
   isPalindrome
