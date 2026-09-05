@@ -1,5 +1,6 @@
 const {
   capitalize,
+  lowercase,
   reverse,
   truncate,
   isPalindrome
@@ -17,6 +18,20 @@ describe('stringUtils', () => {
 
     test('preserves the remaining characters', () => {
       expect(capitalize('tASK')).toBe('TASK');
+    });
+  });
+
+  describe('lowercase', () => {
+    test('converts a mixed-case string to lowercase', () => {
+      expect(lowercase('Hello World')).toBe('hello world');
+    });
+
+    test('returns an empty string unchanged', () => {
+      expect(lowercase('')).toBe('');
+    });
+
+    test('leaves an already lowercase string unchanged', () => {
+      expect(lowercase('tasks')).toBe('tasks');
     });
   });
 
