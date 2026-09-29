@@ -49,9 +49,20 @@ function isPalindrome(str) {
   return str === reverse(str);
 }
 
+/**
+ * Convert a string to lowercase.
+ *
+ * @param {string} str string to convert
+ * @returns {string} lowercase string
+ */
+function lowercase(str) {
+  return str.toLowerCase();
+}
+
 module.exports = {
   capitalize,
   reverse,
   truncate,
-  isPalindrome
+  isPalindrome,
+  lowercase
 };
