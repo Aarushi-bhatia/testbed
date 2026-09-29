@@ -2,7 +2,8 @@ const {
   capitalize,
   reverse,
   truncate,
-  isPalindrome
+  isPalindrome,
+  lowercase
 } = require('../src/utils/stringUtils');
 
 describe('stringUtils', () => {
@@ -59,6 +60,24 @@ describe('stringUtils', () => {
 
     test('keeps spaces in the baseline comparison', () => {
       expect(isPalindrome('never odd or even')).toBe(false);
+    });
+  });
+
+  describe('lowercase', () => {
+    test('converts a string to lowercase', () => {
+      expect(lowercase('Hello World')).toBe('hello world');
+    });
+
+    test('returns an empty string unchanged', () => {
+      expect(lowercase('')).toBe('');
+    });
+
+    test('does not change an already lowercase string', () => {
+      expect(lowercase('test')).toBe('test');
+    });
+
+    test('handles mixed case', () => {
+      expect(lowercase('TeSt')).toBe('test');
     });
   });
 });
